@@ -34,15 +34,11 @@ This allowed the tool to intercept and analyze HTTP requests and responses.
 OWASP ZAP was used to perform an automated spider and active scan of the application.
 The scanner explored the application structure and tested input fields for common vulnerabilities.
 
-ss
-
 ## Vulnerability Findings
 1. SQL Injection:
 - Risk Level: High
 - SQL Injection occurs when user input is improperly validated and is directly included in database queries.
 - This vulnerability may allow attackers to manipulate database queries and potentially extract or modify sensitive data.
-
-(Insert screenshot: SQL Injection alert)
 
 ## Impact:
 - Database data exposure
@@ -58,8 +54,6 @@ ss
 - Risk Level: High
 - Time-based SQL Injection is a blind injection technique where attackers infer database responses based on delayed server responses.
 
-(Insert screenshot)
-
 ## Impact:
 - Database information disclosure
 - exploitation without visible errors
@@ -70,8 +64,6 @@ ss
 3. Missing Anti-Clickjacking Header: 
 - Risk Level: Medium
 - The application does not include the X-Frame-Options header, making it vulnerable to clickjacking attacks.
-- 
-(Insert screenshot)
 
 ## Impact
 - Attackers may trick users into clicking hidden elements embedded inside malicious websites.
@@ -82,8 +74,6 @@ ss
 - Risk Level: Low
 - The application reveals internal IP addresses in server responses.
 
-(Insert screenshot)
-
 ## Impact:
 - This information could assist attackers in mapping internal infrastructure.
 - Mitigation
@@ -91,8 +81,6 @@ ss
 
 5. X-Content-Type Header Missing:
 - Risk Level: Low- The application does not define the X-Content-Type-Options header.
-
-(Insert screenshot)
 
 ## Impact:
 - Browsers may perform MIME type sniffing which can lead to security risks.
